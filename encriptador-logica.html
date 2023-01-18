@@ -1,0 +1,46 @@
+<meta charset = "UTF-8">
+
+<input/>
+<button>Encriptar</button>
+<script>
+	
+	//var secretos = [a,e,i,o,u];
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	
+
+	function verificar() {
+
+		
+
+		for (var posicion = 0; posicion < secretos.lenght; posicion++){
+
+			if (input.value == secretos[posicion]) {
+
+        	alert("usted acerto");
+        	//encontrado = true;
+        	break;
+			}
+
+		} 
+
+		//if (encontrado == false){
+
+		alert("usted erro");
+		//}
+	
+		input.value = "";
+		input.focus()
+
+	}
+
+
+
+	var button = document.querySelector("button");
+	button.onclick = verificar;	
+
+	
+
+</script>

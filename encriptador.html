@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Encriptador de Texto</title>
+    <link rel="stylesheet" href="encriptador.css">
+</head>
+
+
+<script>
+	//var secreto = Math.round(Math.random()*10);
+	var secretos = [3,5,7,9];
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	
+
+	function verificar() {
+
+		//var encontrado = false;
+
+		for (var posicion = 0; posicion < secretos.lenght; posicion++){
+
+			if (parseInt(input.value) == secretos[posicion]) {
+
+        	alert("usted acerto");
+        	//encontrado = true;
+        	break;
+			}
+
+		} 
+
+		//if (encontrado == false){
+
+		alert("usted erro");
+		//}
+	
+		input.value = "";
+		input.focus()
+
+	}
+
+
+
+	var button = document.querySelector("button");
+	button.onclick = verificar;	
+
+	
+
+</script>
+
+<body>  
+    
+    <div id="myDIV">
+        <textarea name="textarea" rows="10" cols="50">Ingrese el texto aqui</textarea> 
+        
+    </div>
+    
+
+    <script>
+        function myFunction() {
+        document.getElementById("imagen").style.display = "none";
+        }
+    </script>
+    <button onclick="myFunction()">Encriptar!</button>
+    <button onclick="myFunction()">Desencriptar!</button>
+    
+    <div id="imagen">
+        <img src="imagenes/Muñeco.png" style="display:inline;">
+    </div>
+
+    <div id="texto-encriptado">
+        <input type="text">
+        <button>Copiar</button>
+    </div>
+   
+ 
+</body>
+<footer>Desarrollado por Luz Natalia Mejia</footer>
+</html>
